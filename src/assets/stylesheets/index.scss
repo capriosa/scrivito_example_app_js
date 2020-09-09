@@ -1,8 +1,5 @@
-/*!
- * Bootstrap v3.3.7
- */
-
-
+ @import "variables";
+ @import "mixins";
 /* important variables
 ================================================== */
 
@@ -27,34 +24,9 @@ $zindex-fixed: 100060 !default;
     transform: translateZ(0);
 }
 
-
-/* - BS3 variables - */
-
-$screen-xs-max: 767px;
-$screen-sm-min: 768px;
-$screen-sm-max: 991px;
-$screen-md-min: 992px;
-$screen-md-max: 1199px;
-$screen-lg-min: 1200px;
-
-
-
-
-
-/* logo versions
-================================================== */
-
-
-/* $logo-white: url(../images/scrivito_logo_white.svg); */
-
-
-/* $logo-dark: url(../images/scrivito_logo.svg); */
-
-
 /* imports
 ================================================== */
 
-@import "_colors";
 @import "bootstrap/bootstrap";
 @import "_fontawesome";
 @import "_social_cards";

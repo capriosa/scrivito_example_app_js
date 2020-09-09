@@ -5,7 +5,7 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   const sectionClassNames = [];
   const sectionStyle = {};
 
-  let backgroundColor = widget.get("backgroundColor") || "white";
+  let backgroundColor = widget.get("backgroundColor") || "transparent";
 
   const backgroundImage = widget.get("backgroundImage");
   if (backgroundImage) {
