@@ -1,0 +1,1 @@
+!function(e){e(function(){e(".button-collapse").sideNav(),e(".parallax").parallax()})}(jQuery);

@@ -1,0 +1,1 @@
+myApp.controller("MainController",function(e,t){var i="https://mdwp-guestbook.firebaseio.com/",n=new Firebase(i);e.messages=t(n),e.addMessage=function(){var t=e.newMessage;t.length&&(e.messages.$add({message:t}),e.newMessage="")}});

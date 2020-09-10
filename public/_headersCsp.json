@@ -1,17 +1,41 @@
 {
   "base-uri": "'none'",
-  "default-src": ["'self'", "data:", "https:", "wss:"],
-  "style-src": ["'self'", "data:", "https:", "wss:", "'unsafe-inline'"],
+  "default-src": [
+    "'self'",
+    "data:",
+    "https:",
+    "wss:"
+  ],
+  "style-src": [
+    "'self'",
+    "data:",
+    "https:",
+    "wss:",
+    "'unsafe-inline'"
+  ],
   "script-src": [
     "'self'",
+    "'unsafe-inline'",
+    "'unsafe-eval'",
     "https://api.scrivito.com",
     "https://app.intercom.io",
     "https://assets.scrivito.com",
     "https://js.intercomcdn.com",
     "https://widget.intercom.io",
-    "https://www.google-analytics.com"
+    "https://www.google-analytics.com",
+    "https://fir-auth-998d9.firebaseio.com",
+    "https://s-usc1c-nss-258.firebaseio.com",
+    "https://maps.googleapis.com/maps/api/js",
+    "https://platform.twitter.com/widgets.js",
+    "https://platform.twitter.com/js/",
+    "https://cdn.syndication.twimg.com/timeline/profile",
+    "https://cdn.snipcart.com",
+    "https://ajax.googleapis.com/",
+    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+    "https://adservice.google.de/adsid/integrator.js",
+    "https://newsapi.org/v2/everything",
+    "https://newsapi.org/v2/"
   ],
   "object-src": "'none'",
-  "block-all-mixed-content": true,
-  "frame-ancestors": ["'self'", "https://*.scrivito.com"]
+  "block-all-mixed-content": false
 }
