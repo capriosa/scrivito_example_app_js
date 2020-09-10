@@ -6,4 +6,5 @@ function importAll(r) {
 importAll(require.context("./", true, /\.js$/));
 import "scrivito-highlight-code";
 import "scrivito-news-reader"
-import "scrivito-highlight-code/index.css";
+import "scrivito-eyecatcher"
+import "scrivito-eyecatcher/index.css";
