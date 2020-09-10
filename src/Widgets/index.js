@@ -7,4 +7,5 @@ importAll(require.context("./", true, /\.js$/));
 import "scrivito-highlight-code";
 import "scrivito-news-reader"
 import "scrivito-eyecatcher"
-import "scrivito-eyecatcher/index.css";
+import "scrivito-highlight-code/index.css"
+import "scrivito-highlight-code/index.css";
