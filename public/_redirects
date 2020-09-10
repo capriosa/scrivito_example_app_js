@@ -10,6 +10,7 @@ https://mdwp.netlify.app/* https://www.mdwp.de/:splat 301!
 https://mdwp-homepage.netlify.app/* https://www.mdwp.de/:splat 301!
 https://mdwp.de/* https://www.mdwp.de/:splat 301!
 /gaestebuch /news-feed 301!
+/about /404.html 410!
 /start /404.html 410!
 /drupal-8-0 /404.html 410!
 /drupal-8-fuer-anfaenger /404.html 410!
