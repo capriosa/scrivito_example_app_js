@@ -24,6 +24,8 @@ export default async function generateHtml({
     <link rel="preconnect" href="https://api.scrivito.com" />
     <link rel="preconnect" href="https://cdn0.scrvt.com" />
     <link rel="stylesheet" href="${assets["index.css"]}" />
+    <link rel="preconnect" href="https://cdn0.scrvt.com" />
+    <link href="https://github.com/mdwp" rel="me" />
 
     <script src="/js_snippets_head.js"></script>
   </head>
