@@ -45,6 +45,7 @@
     "fs-extra": "^9.0.1",
     "fuse.js": "^3.6.1",
     "generator-scrivito": "file:generator-scrivito",
+    "grpc": "^1.20.2",
     "history": "^4.10.1",
     "html-webpack-plugin": "^4.4.1",
     "is-empty": "^1.2.0",
