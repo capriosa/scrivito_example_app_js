@@ -23,6 +23,8 @@ export default async function generateHtml({
     <link defer async rel="preconnect" href="https://api.scrivito.com" crossorigin />
     <link defer async rel="preconnect" href="https://cdn0.scrvt.com" />
     <link rel="stylesheet" href="${assets["index.css"]}" />
+    <link rel="preconnect" href="https://cdn0.scrvt.com" />
+    <link href="https://github.com/mdwp" rel="me" />
 
 
   </head>
