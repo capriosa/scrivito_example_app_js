@@ -4,7 +4,7 @@ const path = require("path");
 const process = require("process");
 const webpack = require("webpack");
 const lodash = require("lodash");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
@@ -115,7 +115,7 @@ function webpackConfig(env = {}) {
           ? "[name].js"
           : "assets/[name].[contenthash].js";
       },
-      chunkFilename: "assets/chunk-[id].[contenthash].js",
+
       path: path.join(__dirname, buildPath),
     },
     plugins: generatePlugins({ isProduction, isPrerendering, scrivitoOrigin }),
@@ -155,7 +155,7 @@ function generateEntry({ isPrerendering }) {
 }
 
 function generatePlugins({ isProduction, isPrerendering, scrivitoOrigin }) {
-  const ignorePublicFiles = ["**/_headersCsp.json", "**/_headers"];
+  const ignorePublicFiles = ["_headersCsp.json"];
 
   const plugins = [
     new webpack.EnvironmentPlugin({
@@ -164,24 +164,20 @@ function generatePlugins({ isProduction, isPrerendering, scrivitoOrigin }) {
       SCRIVITO_ORIGIN: scrivitoOrigin,
     }),
     new Webpackbar(),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: "../public", globOptions: { ignore: ignorePublicFiles } },
-        {
-          from: "../public/_headers",
-          transform: (content) => {
-            const csp = builder({ directives: headersCsp });
-            return content
-              .toString()
-              .replace(/CSP-DIRECTIVES-PLACEHOLDER/g, csp);
-          },
+    new CopyWebpackPlugin([
+      { from: "../public", ignore: ignorePublicFiles },
+      {
+        from: "../public/_headers",
+        transform: (content) => {
+          const csp = builder({ directives: headersCsp });
+          return content.toString().replace(/CSP-DIRECTIVES-PLACEHOLDER/g, csp);
         },
-        {
-          from: "../node_modules/scrivito/scrivito/index.html",
-          to: "scrivito/index.html",
-        },
-      ],
-    }),
+      },
+      {
+        from: "../node_modules/scrivito/scrivito/index.html",
+        to: "scrivito/index.html",
+      },
+    ]),
     new MiniCssExtractPlugin({
       filename: "assets/[name].[contenthash].css",
     }),

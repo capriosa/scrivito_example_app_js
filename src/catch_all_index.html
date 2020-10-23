@@ -8,11 +8,12 @@
   <meta name="generator" content="Scrivito by Infopark Group GmbH (scrivito.com)" />
 
   <title>Your Scrivito powered site is loading ...</title>
-  <link defer async rel="preconnect" href="https://api.scrivito.com" crossorigin />
-  <link defer async rel="preconnect" href="https://cdn0.scrvt.com" />
+  <link rel="preconnect" href="https://api.scrivito.com" crossorigin />
+  <link rel="preconnect" href="https://api.scrivito.com" />
+  <link rel="https://github.com/mdwp" rel="me" />
   <%= htmlWebpackPlugin.tags.headTags %>
 
-
+  <script src="/js_snippets_head.js"></script>
 </head>
 
 <body>
@@ -23,6 +24,7 @@
     </span>
   </div>
   <%= htmlWebpackPlugin.tags.bodyTags %>
+  <script src="/js_snippets_before_body_end.js"></script>
 </body>
 
 </html>
