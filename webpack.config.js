@@ -1,3 +1,4 @@
+const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const builder = require("content-security-policy-builder");
 const dotenv = require("dotenv");
 const path = require("path");
@@ -106,7 +107,14 @@ function webpackConfig(env = {}) {
       ],
     },
     optimization: {
-      minimizer: [new TerserPlugin({ terserOptions: { ecma: 5 } })],
+      minimizer: [new TerserPlugin({
+        terserOptions: {
+          ecma: 5,
+          cache: true,
+          parallel: true,
+          sourceMap: true,
+        }
+      })],
     },
     output: {
       publicPath: "/",
@@ -158,6 +166,7 @@ function generatePlugins({ isProduction, isPrerendering, scrivitoOrigin }) {
   const ignorePublicFiles = ["_headersCsp.json"];
 
   const plugins = [
+    new LodashModuleReplacementPlugin,
     new webpack.EnvironmentPlugin({
       NODE_ENV: isProduction ? "production" : "development",
       SCRIVITO_TENANT: "",
