@@ -90,7 +90,7 @@
     "zip-webpack-plugin": "^3.0.0"
   },
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack -p --mode=production",
     "prerender": "SCRIVITO_PRERENDER=true npm run build && node prerender/storePrerenderedContent.js",
     "start": "webpack-dev-server --open"
   }
