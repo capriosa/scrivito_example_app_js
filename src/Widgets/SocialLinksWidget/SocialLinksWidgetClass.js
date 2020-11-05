@@ -2,7 +2,10 @@ import * as Scrivito from 'scrivito'
 
 const SocialLinksWidget = Scrivito.provideWidgetClass('SocialLinksWidget', {
   attributes: {
-    url: 'string',
+    socialLinks: [
+      "multienum",
+      { values: ["facebook", "twitter", "linkedin", "whatsapp", "xing"] },
+    ],
     textToShare: 'string'
   }
 })
