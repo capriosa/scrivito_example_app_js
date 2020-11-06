@@ -78,7 +78,7 @@
     "scrivito-eyecatcher": "^1.1.2",
     "scrivito-highlight-code": "^1.0.7",
     "scrivito-news-reader": "^1.3.9",
-    "scrivito-undraw": "1.0.8",
+    "scrivito-undraw": "^1.0.8",
     "scroll-to-fragment": "^1.0.7",
     "slick-carousel": "^1.6.0",
     "terser-webpack-plugin": "^4.1.0",
