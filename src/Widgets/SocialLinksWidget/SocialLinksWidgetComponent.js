@@ -32,10 +32,10 @@ function Links({ widget }) {
   if (!currentPage) return;
   const currentPageUrl = Scrivito.urlFor(currentPage);
   const linkToTwitter = 'https://twitter.com/intent/tweet/?text=' + textToShare + '&url=' + currentPageUrl;
-  const linkToFb = 'https://facebook.com/sharer/sharer.php?u=' + currentPageUrl + '&t=' + textToShare;
-  const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + currentPageUrl + '&title=' + textToShare + '&summary=' + textToShare + '&source=https%3A%2F%2Fwww.mdwp.de';
+  const linkToFb = 'https://facebook.com/sharer/sharer.php?u=' + currentPageUrl + '&title=' + textToShare;
+  const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + currentPageUrl + '&title=' + textToShare + '&summary=' + textToShare + '&source=' + currentPageUrl;
   const linkToWhatsApp = 'whatsapp://send?text' + textToShare;
-  const linkToXing = 'https://www.xing.com/social/share/spi?url=' + currentPageUrl + '&quote=' + textToShare;
+  const linkToXing = 'https://www.xing.com/social/share/spi?url=' + currentPageUrl + '&title=' + textToShare;
 
   return widget.get("socialLinks").map(socialNet => {
 
