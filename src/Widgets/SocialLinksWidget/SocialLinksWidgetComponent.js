@@ -7,16 +7,6 @@ import uniqid from 'uniqid';
 
 
 Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
-  const currentPage = Scrivito.currentPage();
-  const textToShare = widget.get('textToShare');
-
-  if (!currentPage) return;
-  const currentPageUrl = Scrivito.urlFor(currentPage);
-  const linkToTwitter = 'https://twitter.com/intent/tweet/?text=' + textToShare + '&url=' + currentPageUrl;
-  const linkToFb = 'https://facebook.com/sharer/sharer.php?u=' + currentPageUrl + '&t=' + textToShare;
-  const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + currentPageUrl + '&title=' + textToShare + '&summary=' + textToShare + '&source=https%3A%2F%2Fwww.mdwp.de';
-  const linkToWhatsApp = 'whatsapp://send?text' + textToShare;
-  const linkToXing = 'https://www.xing.com/social/share/spi?url=' + currentPageUrl + '&quote=' + textToShare;
 
 
   if (!widget.get('textToShare').length) {
@@ -35,7 +25,18 @@ Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
 
 })
 
-function Links(widget) {
+function Links({ widget }) {
+  const currentPage = Scrivito.currentPage();
+  const textToShare = widget.get('textToShare');
+
+  if (!currentPage) return;
+  const currentPageUrl = Scrivito.urlFor(currentPage);
+  const linkToTwitter = 'https://twitter.com/intent/tweet/?text=' + textToShare + '&url=' + currentPageUrl;
+  const linkToFb = 'https://facebook.com/sharer/sharer.php?u=' + currentPageUrl + '&t=' + textToShare;
+  const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + currentPageUrl + '&title=' + textToShare + '&summary=' + textToShare + '&source=https%3A%2F%2Fwww.mdwp.de';
+  const linkToWhatsApp = 'whatsapp://send?text' + textToShare;
+  const linkToXing = 'https://www.xing.com/social/share/spi?url=' + currentPageUrl + '&quote=' + textToShare;
+
   return widget.get("socialLinks").map(socialNet => {
 
     switch (socialNet) {
@@ -62,8 +63,7 @@ function Links(widget) {
     }
   }
   )
-}
-;
+};
 
 
 const Twitter = ({ link }) => (
@@ -101,8 +101,8 @@ const LinkedIn = ({ link }) => (
 
 const WhatsApp = ({ link }) => (
   <div onClick={() => window.open(link, '_blank', 'left=500,top=250,height=400,width=520')} className='resp-sharing-button__link'>
-    <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--circle">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle xmlns="http://www.w3.org/2000/svg" cx="12" cy="12" r="11.5" /><path stroke-width="1px" d="M17.6 6.2c-1.5-1.5-3.4-2.3-5.5-2.3-4.3 0-7.8 3.5-7.8 7.8 0 1.4.4 2.7 1 3.9l-1.1 4 4.1-1.1c1.1.6 2.4.9 3.7.9 4.3 0 7.8-3.5 7.8-7.8.1-2-.7-3.9-2.2-5.4zm-5.5 11.9c-1.2 0-2.3-.3-3.3-.9l-.2-.1-2.4.6.7-2.4-.2-.2c-.6-1-1-2.2-1-3.4 0-3.6 2.9-6.5 6.5-6.5 1.7 0 3.3.7 4.6 1.9 1.2 1.2 1.9 2.8 1.9 4.6-.1 3.5-3 6.4-6.6 6.4zm3.5-4.8c-.2-.1-1.1-.6-1.3-.6-.2-.1-.3-.1-.4.1-.1.2-.5.6-.6.8-.1.1-.2.1-.4 0s-.8-.3-1.6-1c-.6-.5-1-1.2-1.1-1.3-.1-.2 0-.3.1-.4l.3-.3s.1-.2.2-.3c.1-.1 0-.2 0-.3s-.4-1.1-.6-1.4c-.2-.4-.3-.3-.4-.3h-.4s-.3 0-.5.2-.7.7-.7 1.6c0 1 .7 1.9.8 2s1.4 2.1 3.3 2.9c.5.2.8.3 1.1.4.5.1.9.1 1.2.1.4-.1 1.1-.5 1.3-.9.2-.5.2-.8.1-.9 0-.2-.2-.3-.4-.4z" /></svg>
+    <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 0c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 3.8c2.2 0 4.2 0.9 5.7 2.4 1.6 1.5 2.4 3.6 2.5 5.7 0 4.5-3.6 8.1-8.1 8.1-1.4 0-2.7-0.4-3.9-1l-4.4 1.1 1.2-4.2c-0.8-1.2-1.1-2.6-1.1-4 0-4.5 3.6-8.1 8.1-8.1zm0.1 1.5c-3.7 0-6.7 3-6.7 6.7 0 1.3 0.3 2.5 1 3.6l0.1 0.3-0.7 2.4 2.5-0.7 0.3 0.099c1 0.7 2.2 1 3.4 1 3.7 0 6.8-3 6.9-6.6 0-1.8-0.7-3.5-2-4.8s-3-2-4.8-2zm-3 2.9h0.4c0.2 0 0.4-0.099 0.5 0.3s0.5 1.5 0.6 1.7 0.1 0.2 0 0.3-0.1 0.2-0.2 0.3l-0.3 0.3c-0.1 0.1-0.2 0.2-0.1 0.4 0.2 0.2 0.6 0.9 1.2 1.4 0.7 0.7 1.4 0.9 1.6 1 0.2 0 0.3 0.001 0.4-0.099s0.5-0.6 0.6-0.8c0.2-0.2 0.3-0.2 0.5-0.1l1.4 0.7c0.2 0.1 0.3 0.2 0.5 0.3 0 0.1 0.1 0.5-0.099 1s-1 0.9-1.4 1c-0.3 0-0.8 0.001-1.3-0.099-0.3-0.1-0.7-0.2-1.2-0.4-2.1-0.9-3.4-3-3.5-3.1s-0.8-1.1-0.8-2.1c0-1 0.5-1.5 0.7-1.7s0.4-0.3 0.5-0.3z" /></svg>
     </div>
     </div>
   </div>
@@ -110,8 +110,8 @@ const WhatsApp = ({ link }) => (
 
 const Xing = ({ link }) => (
   <div onClick={() => window.open(link, '_blank', 'left=500,top=250,height=400,width=520')} className='resp-sharing-button__link'>
-    <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--circle">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11.5" /><path d="M8.4 8.5h-3L7 11.3l-2.2 3.2h3l2.3-3.2zm10-3h-3.2l-5 8.5 3.2 5.5h3.3l-3-5.5z" /></svg>
+    <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.8 14.5h-3L7 11.3 5.3 8.5h3l1.8 2.8L8 14.5zm9 5h-3.4l-3-5.5L15 5.5h3.2L13.6 14l3 5.5z" /></svg>
     </div>
     </div>
   </div>

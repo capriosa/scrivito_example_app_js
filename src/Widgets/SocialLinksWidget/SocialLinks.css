@@ -20,6 +20,8 @@
   padding: 0.5em 0.75em;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   cursor:pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .resp-sharing-button__icon svg {
@@ -29,7 +31,7 @@
   vertical-align: top
 }
 
-.resp-sharing-button--small svg {
+.resp-sharing-button--large svg {
   margin: 0;
   vertical-align: middle
 }
@@ -37,7 +39,8 @@
 /* Non solid icons get a stroke */
 .resp-sharing-button__icon {
   stroke: #fff;
-  fill: none
+  fill: none;
+
 }
 
 /* Solid icons get a fill */
