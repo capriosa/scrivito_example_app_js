@@ -1,3 +1,8 @@
+.share {
+  display: flex;
+  justify-content: center;
+}
+
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
   display: inline-block
@@ -10,7 +15,7 @@
 }
 
 .resp-sharing-button {
-  border-radius: 5px;
+  border-radius: 50%;
   transition: 25ms ease-out;
   padding: 0.5em 0.75em;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;

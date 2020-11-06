@@ -3,7 +3,6 @@ import * as Scrivito from 'scrivito'
 import InPlaceEditingPlaceholder from '../../Components/InPlaceEditingPlaceholder'
 import "./SocialLinks.css";
 import uniqid from 'uniqid';
-import NewWindow from 'react-new-window'
 
 
 
@@ -28,6 +27,15 @@ Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
     )
   }
 
+  return (
+    <div className="share">
+      <Links widget={widget} />
+    </div>
+  )
+
+})
+
+function Links(widget) {
   return widget.get("socialLinks").map(socialNet => {
 
     switch (socialNet) {
@@ -52,11 +60,10 @@ Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
           <Xing key={uniqid()} link={linkToXing} />
         );
     }
-  });
-
-
-})
-
+  }
+  )
+}
+;
 
 
 const Twitter = ({ link }) => (
