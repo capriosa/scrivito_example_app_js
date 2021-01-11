@@ -32,5 +32,6 @@
     "https://newsapi.org/v2/"
   ],
   "object-src": "'none'",
-  "block-all-mixed-content": false
+  "block-all-mixed-content": false,
+  "frame-ancestors": ["'self'", "https://*.scrivito.com"]
 }
