@@ -19,6 +19,7 @@ export default async function generateHtml({
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="Scrivito by Infopark Group GmbH (scrivito.com)" />
+    <meta http-equiv="expires" content="4320000" />
     ${headContent}
     <link defer async rel="preconnect" href="https://api.scrivito.com" crossorigin />
     <link defer async rel="preconnect" href="https://cdn0.scrvt.com" />
