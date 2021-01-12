@@ -420,7 +420,6 @@ p.bg-gradient-light-color {
 .bg-greymiddle,
 .bg-greywhite,
 .bg-white {
-    background-attachment: fixed !important;
     &.medium-height {
         min-height: 450px;
     }
@@ -2566,3 +2565,76 @@ h2.card-title {
 footer .page-list li a {
     color: #fff !important;
 }
+
+.height-10 {
+    height: 10vh;
+  }
+  
+  .height-15 {
+    height: 15vh;
+  }
+  
+  .height-20 {
+    height: 20vh;
+  }
+  
+  .height-25 {
+    height: 25vh;
+  }
+  
+  .height-33 {
+    height: 33.333333vh;
+  }
+  
+  .height-50 {
+    height: 50vh !important;
+  }
+  
+  .height-66 {
+    height: 66.666666vh;
+  }
+  
+  .height-75 {
+    height: 75vh;
+  }
+  
+  .height-100 {
+    height: 100vh;
+  }
+  
+  .card {
+    border: none !important;
+  }
+  
+  section {
+    padding-top: 20px;
+    border-bottom: 2px solid #fff !important;
+  }
+  
+  @media (min-width: $screen-md-min) {
+    .border-right {
+      border-right: 2px solid #fff !important;
+    }
+  }
+  
+  .p-large {
+    color: #fff;
+  }
+  
+  .deco-border::before {
+    content: "";
+    display: block;
+    margin: 40px auto;
+    width: 33vw;
+    height: 3px;
+    background: #fff !important;
+  }
+  
+  .deco-border::after {
+    content: "";
+    display: block;
+    margin: 40px auto;
+    width: 33vw;
+    height: 3px;
+    background: #fff !important;
+  }  

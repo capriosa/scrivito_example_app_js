@@ -1,5 +1,6 @@
 import * as Scrivito from "scrivito";
 
+
 const ColumnContainerWidget = Scrivito.provideWidgetClass(
   "ColumnContainerWidget",
   {
@@ -10,5 +11,6 @@ const ColumnContainerWidget = Scrivito.provideWidgetClass(
     extractTextAttributes: ["columns"],
   }
 );
+
 
 export default ColumnContainerWidget;
