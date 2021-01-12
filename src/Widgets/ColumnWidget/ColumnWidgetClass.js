@@ -9,4 +9,6 @@ const ColumnWidget = Scrivito.provideWidgetClass("ColumnWidget", {
   extractTextAttributes: ["content"],
 });
 
+
+
 export default ColumnWidget;
