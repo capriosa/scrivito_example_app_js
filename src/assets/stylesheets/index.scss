@@ -2639,3 +2639,9 @@ footer .page-list li a {
     height: 3px;
     background: #fff !important;
   }  
+
+  .squeezed {
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+  }

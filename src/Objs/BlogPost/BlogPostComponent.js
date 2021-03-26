@@ -4,7 +4,6 @@ import * as Scrivito from "scrivito";
 import BlogPostAuthor from "../../Components/BlogPost/BlogPostAuthor";
 import BlogPostMorePosts from "../../Components/BlogPost/BlogPostMorePosts";
 import BlogPostNavigation from "../../Components/BlogPost/BlogPostNavigation";
-import BlogPostTagList from "../../Components/BlogPost/BlogPostTagList";
 import SchemaDotOrg from "../../Components/SchemaDotOrg";
 
 Scrivito.provideComponent("BlogPost", ({ page }) => (
@@ -28,7 +27,6 @@ Scrivito.provideComponent("BlogPost", ({ page }) => (
     </section>
     <Scrivito.ContentTag tag="div" content={page} attribute="body" />
     <BlogPostAuthor author={page.get("author")} />
-    <BlogPostTagList tags={page.get("tags")} />
     <BlogPostMorePosts
       author={page.get("author")}
       filterBlogPostId={page.id()}
