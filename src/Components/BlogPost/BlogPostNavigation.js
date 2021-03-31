@@ -16,11 +16,6 @@ const BlogPostNavigation = Scrivito.connect(({ currentPost }) => {
               <BlogPostNextLink currentBlogPost={currentPost} />
             </li>
             <li>
-              <span>
-                <BlogPostDate post={currentPost} />
-              </span>
-            </li>
-            <li>
               <BlogPostPreviousLink currentBlogPost={currentPost} />
             </li>
           </ul>
