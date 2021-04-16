@@ -2615,6 +2615,15 @@ footer .page-list li a {
           width: 100%;
       }
   }
+
+  @keyframes sec-line {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
   
   .navbar-fixed section {
     padding-top: 20px;
@@ -2629,6 +2638,18 @@ footer .page-list li a {
     height: 2px;
     position: absolute;
     top: 260px;
+    }
+    &:after {
+        content:"";
+        animation-name: sec-line;
+        animation-duration: 3s;
+        animation-delay: 3.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        background: $primary;
+        height: 2px;
+        position: absolute;
+        top: 262px; 
     }
   }
   
