@@ -2638,7 +2638,6 @@ footer .page-list li a {
     height: 2px;
     position: absolute;
     top: 260px;
-    }
     &:after {
         content:"";
         animation-name: sec-line;
@@ -2651,6 +2650,8 @@ footer .page-list li a {
         position: absolute;
         top: 262px; 
     }
+    }
+    
   }
   
   @media (min-width: $screen-md-min) {
