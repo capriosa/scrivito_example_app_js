@@ -2606,25 +2606,10 @@ footer .page-list li a {
   .card {
     border: none !important;
   }
-
-  @keyframes line {
-      from {
-          width: 0;
-      }
-      to {
-          width: 100%;
-      }
-  }
   
   .navbar-fixed section {
     padding-top: 20px;
     border-bottom: 2px solid $secondary !important;
-    background-color: $secondary;
-    animation-name: line;
-    animation-duration: 3s;
-    animation-delay: .5s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
   }
   
   @media (min-width: $screen-md-min) {
