@@ -5,7 +5,6 @@ import "./SocialLinks.css";
 import uniqid from 'uniqid';
 
 
-
 Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
 
 
@@ -25,7 +24,7 @@ Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
 
 })
 
-function Links({ widget }) {
+const Links = Scrivito.connect(({ widget }) => {
   const currentPage = Scrivito.currentPage();
   const textToShare = widget.get('textToShare');
 
@@ -63,7 +62,10 @@ function Links({ widget }) {
     }
   }
   )
-};
+}
+)
+
+
 
 
 const Twitter = ({ link }) => (

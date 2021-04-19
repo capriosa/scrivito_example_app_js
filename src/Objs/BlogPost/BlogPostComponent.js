@@ -5,6 +5,7 @@ import BlogPostAuthor from "../../Components/BlogPost/BlogPostAuthor";
 import BlogPostMorePosts from "../../Components/BlogPost/BlogPostMorePosts";
 import BlogPostNavigation from "../../Components/BlogPost/BlogPostNavigation";
 import SchemaDotOrg from "../../Components/SchemaDotOrg";
+import Comments from "../../Components/Comments";
 
 Scrivito.provideComponent("BlogPost", ({ page }) => (
   <div>
@@ -31,6 +32,7 @@ Scrivito.provideComponent("BlogPost", ({ page }) => (
       author={page.get("author")}
       filterBlogPostId={page.id()}
     />
+    <Comments />
     <SchemaDotOrg content={page} />
   </div>
 ));

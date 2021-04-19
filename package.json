@@ -74,7 +74,7 @@
     "reactstrap": "^8.5.1",
     "recharts": "^1.8.5",
     "sass-loader": "^10.0.1",
-    "scrivito": "^1.16.0",
+    "scrivito": "^1.21.0",
     "scrivito-eventbrite": "^1.4.6",
     "scrivito-eyecatcher": "^1.1.2",
     "scrivito-highlight-code": "^1.0.7",
