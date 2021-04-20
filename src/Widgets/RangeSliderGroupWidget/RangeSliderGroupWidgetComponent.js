@@ -41,7 +41,7 @@ class RangeSliderGroupComponent extends React.Component {
               <div className='col col-sm-9'><h3>{item.get('headline')}</h3></div>
             </div>
             <div className='mb-3 row'>
-              <div className='col col-sm-3'>{item.get('targetEntity')}: {this.state.value * item.get('factor')}</div>
+              <div className='col col-sm-3'>{item.get('targetEntity')}: {(this.state.value * item.get('factor')).toFixed(2)}</div>
               <div className='col col-sm-9'>
                 <InputRange
                   key={index}
