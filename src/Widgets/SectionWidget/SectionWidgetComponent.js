@@ -13,7 +13,7 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   const verticalAlgin = widget.get("verticalAlign");
 
   
-    sectionClassNames.push('d-flex')
+  
   
 
   const backgroundImage = widget.get("backgroundImage");
