@@ -3,6 +3,7 @@ import * as Scrivito from "scrivito";
 const SectionWidget = Scrivito.provideWidgetClass("SectionWidget", {
   attributes: {
     content: "widgetlist",
+    useFlexGrid: ["enum", { values: ["yes", "no"] }],
     useFullWidth: ["enum", { values: ["yes", "no"] }],
     useFullHeight: ["enum", { values: ["yes", "no"] }],
     showPadding: ["enum", { values: ["yes", "no"] }],

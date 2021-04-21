@@ -20,6 +20,11 @@ Scrivito.provideEditingConfig("SectionWidget", {
         { value: "alert-color", title: "Alert color" },
       ],
     },
+    useFlexGrid: {
+      title: "Use as flex grid?",
+      description: "Default: No",
+      values: [{ value: "yes", title: "Yes" }, { value: "no", title: "No" }],
+    },
     useFullWidth: {
       title: "Use full width?",
       description: "Default: No",
@@ -71,6 +76,7 @@ Scrivito.provideEditingConfig("SectionWidget", {
     },
   },
   properties: [
+    "useFlexGrid",
     "backgroundColor",
     "backgroundImage",
     "boxHeight",
@@ -82,6 +88,7 @@ Scrivito.provideEditingConfig("SectionWidget", {
     "showPadding",
   ],
   initialContent: {
+    useFlexGrid: "no",
     boxHeight: "50",
     backgroundColor: "white",
     useGradient: "no",

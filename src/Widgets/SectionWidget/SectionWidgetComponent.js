@@ -1,9 +1,10 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
+import "./SectionWidget.scss"
 
 Scrivito.provideComponent("SectionWidget", ({ widget }) => {
 
-  const sectionClassNames = ['d-flex'];
+  const sectionClassNames = [];
   const sectionStyle = {};
 
   const backgroundColor = widget.get("backgroundColor") || "white";
@@ -11,7 +12,9 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   const rightBorder = widget.get("rightBorder") === "yes";
   const verticalAlgin = widget.get("verticalAlign");
 
-
+  
+    sectionClassNames.push('d-flex')
+  
 
   const backgroundImage = widget.get("backgroundImage");
   if (backgroundImage) {
@@ -88,26 +91,38 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
     sectionClassNames.push("no-padding");
   }
 
-  let contentClassName = "container";
   if (widget.get("useFullWidth") === "yes") {
-    contentClassName = "container-fluid gutter0";
+    sectionClassNames.push("container-fluid");
+  }
+  else if (widget.get("useFullWidth") === "no"){
+    sectionClassNames.push("container");
   }
 
   if (widget.get("useFullHeight") === "yes") {
     sectionClassNames.push("full-height");
   }
 
+  if(widget.get("useFlexGrid") === "yes")
   return (
-    <Scrivito.BackgroundImageTag
-      tag="section"
-      className={sectionClassNames.join(" ")}
-      style={sectionStyle}
-    >
+    
       <Scrivito.ContentTag
-        className={contentClassName}
+        className="flex-grid"
         content={widget}
         attribute="content"
       />
-    </Scrivito.BackgroundImageTag>
-  );
+    
+  )
+  else if(widget.get("useFlexGrid") === "no")
+    return (
+      <Scrivito.BackgroundImageTag
+        tag="section"
+        className={sectionClassNames.join(" ")}
+        style={sectionStyle}
+      >
+      <Scrivito.ContentTag
+        content={widget}
+        attribute="content"
+      />
+      </Scrivito.BackgroundImageTag>
+    )
 });
