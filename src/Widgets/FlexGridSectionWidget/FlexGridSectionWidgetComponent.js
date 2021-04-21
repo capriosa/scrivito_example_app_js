@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
-import "./SectionWidget.scss"
+import "./FlexGridSectionWidget.scss"
 
-Scrivito.provideComponent("SectionWidget", ({ widget }) => {
+Scrivito.provideComponent("FlexGridSectionWidget", ({ widget }) => {
 
   const sectionClassNames = [];
   const sectionStyle = {};
@@ -107,7 +107,7 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
     contentClassName = "container-fluid gutter0";
   }
 
-  if(widget.get("useFlexGrid") === "yes")
+  
   return (
     
       <Scrivito.ContentTag
@@ -117,18 +117,5 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
       />
     
   )
-  else if(widget.get("useFlexGrid") === "no")
-    return (
-      <Scrivito.BackgroundImageTag
-      tag="section"
-      className={sectionClassNames.join(" ")}
-      style={sectionStyle}
-    >
-      <Scrivito.ContentTag
-        className={contentClassName}
-        content={widget}
-        attribute="content"
-      />
-    </Scrivito.BackgroundImageTag>
-    )
+  
 });

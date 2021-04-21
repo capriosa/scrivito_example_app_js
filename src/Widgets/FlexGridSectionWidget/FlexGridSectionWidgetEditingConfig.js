@@ -1,8 +1,8 @@
 import * as Scrivito from "scrivito";
 import sectionWidgetIcon from "../../assets/images/section_widget.svg";
 
-Scrivito.provideEditingConfig("SectionWidget", {
-  title: "Section",
+Scrivito.provideEditingConfig("FlexGridSectionWidget", {
+  title: "Flex Grid Section",
   thumbnail: sectionWidgetIcon,
   attributes: {
     backgroundColor: {

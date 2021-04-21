@@ -1,6 +1,6 @@
 import * as Scrivito from "scrivito";
 
-const SectionWidget = Scrivito.provideWidgetClass("SectionWidget", {
+const FlexGridSectionWidget = Scrivito.provideWidgetClass("FlexGridSectionWidget", {
   attributes: {
     content: "widgetlist",
     useFlexGrid: ["enum", { values: ["yes", "no"] }],
@@ -45,4 +45,4 @@ const SectionWidget = Scrivito.provideWidgetClass("SectionWidget", {
 
 
 
-export default SectionWidget;
+export default FlexGridSectionWidget;
