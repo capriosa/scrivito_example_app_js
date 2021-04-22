@@ -12,12 +12,12 @@ function Footer() {
   return (
     <React.Fragment>
       <section>
-        <div class="container">
+        <div className="container">
       <script src="https://utteranc.es/client.js"
         repo="capriosa/scrivito_example_app_js"
         issue-term="pathname"
         theme="github-light"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         async>
     </script></div></section>
       <InPlaceEditingPlaceholder block center>
