@@ -31,6 +31,8 @@ article {
   }
 }
 
-.article-6fc59353 { 
+@media (min-width: 667px) {
+  .article-6fc59353 { 
   grid-column: 1/3; 
+}
 }
