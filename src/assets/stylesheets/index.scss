@@ -85,7 +85,7 @@ a:hover,
 a:active,
 a:focus {
     color: darken($primary, 5%);
-    text-decoration: underline;
+    text-decoration: none;
     outline: none !important;
 }
 
