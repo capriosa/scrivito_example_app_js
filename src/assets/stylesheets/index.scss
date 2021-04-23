@@ -129,8 +129,8 @@ h6,
 
 h1,
 .h1 {
-    font-size: 50px;
-    margin-top: 60px !important;
+    font-size: clamp(2.5rem,3vw,3.5rem) !important;
+    margin-top: clamp(30px,40px,60px) !important;
 }
 
 .navbar-fixed h1 {
@@ -140,7 +140,7 @@ h1,
 
 h2,
 .h2 {
-    font-size: 35px;
+    font-size: clamp(1.2rem,2vw,3rem) !important;
 }
 
 h3,
@@ -202,7 +202,7 @@ img {
 }
 
 .no-margin {
-    margin: 0 !important;
+    margin: 0;
 }
 
 
@@ -2637,7 +2637,7 @@ footer .page-list li a {
     background: $secondary;
     height: 2px;
     position: absolute;
-    top: 260px;
+    border: 100px;
     }
     
   }
