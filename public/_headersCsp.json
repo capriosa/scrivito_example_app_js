@@ -29,7 +29,10 @@
     "https://cdn.snipcart.com",
     "https://ajax.googleapis.com/",
     "https://newsapi.org/v2/everything",
-    "https://newsapi.org/v2/"
+    "https://newsapi.org/v2/",
+    "https://newsapi.org/v3/everything",
+    "https://newsapi.org/v3/",
+    "https://pagead2.googlesyndication.com/"
   ],
   "object-src": "'none'",
   "block-all-mixed-content": false,
