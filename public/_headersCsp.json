@@ -32,7 +32,9 @@
     "https://newsapi.org/v2/",
     "https://newsapi.org/v3/everything",
     "https://newsapi.org/v3/",
-    "https://pagead2.googlesyndication.com/"
+    "https://pagead2.googlesyndication.com/",
+    "https://utteranc.es/client.js",
+    "https://tpc.googlesyndication.com/sodar/"
   ],
   "object-src": "'none'",
   "block-all-mixed-content": false,
