@@ -201,8 +201,8 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 90vw,
   md: 85vw,
-  lg: 82vw,
-  xl: 80vw
+  lg: 80vw,
+  xl: 75vw
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
